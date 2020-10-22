@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Учебный абонемент - МГУ им. А.А.Кулешова</title>
+        <meta name="theme-color" content="#c9e0e04d">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+        <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
+        <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+        <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
+        <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+        <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+        <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+        <link rel="stylesheet" href="../styles/main.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap">
+        <link rel="stylesheet" href="../styles/pannellum.css">
+    </head>
+    <body>
+
+        <div class="overlay">
+    <nav class="overlayMenu">  
+        <ul role="menu">
+            <li><a href="../index.html" role="menuitem">Главная</a></li>
+            <li><a href="reading-room.html" role="menuitem">Читальный зал</a></li>
+            <li><a href="training-sub.html" role="menuitem">Учебный абонемент</a></li>
+        </ul> 
+    </nav>
+
+    <div class="img">
+
+    </div>
+</div>
+
+<div class="navBurger" role="navigation" id="navToggle"></div>
+        <div id="train_scene">
+
+</div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pannellum/2.5.6/pannellum.js"></script>
+        <script src="../js/main.js"></script>
+        <script>
+            pannellum.viewer('train_scene', {
+            "autoLoad": true,
+            "showControls": false,
+            "compass": false,
+            "autoRotate": -1,
+            "default": {
+                "firstScene": "fsttrain",
+            },
+        
+            "scenes": {
+                "fsttrain": {
+                    "type": "equirectangular",
+                    "panorama": "../img/train-room/1.jpg",
+                    "yaw": 60,
+                    "hotSpots": [
+                        {
+                            "pitch": 0,
+                            "yaw": 55,
+                            "type": "scene",
+                            "text": "Next spot",
+                            "sceneId": "scndtrain"
+                        },
+                        {
+                            "pitch": 0,
+                            "yaw": 41,
+                            "type": "scene",
+                            "text": "Next spot",
+                            "sceneId": "thrdtrain"
+                        }
+                    ]
+                },
+                "scndtrain": {
+                    "type": "equirectangular",
+                    "panorama": "../img/train-room/2.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": 0,
+                            "yaw": 178,
+                            "type": "scene",
+                            "text": "Prev spot",
+                            "sceneId": "fsttrain"
+                        },
+                        {
+                            "pitch": 0,
+                            "yaw": 88,
+                            "type": "scene",
+                            "text": "Next spot",
+                            "sceneId": "frthtrain"
+                        }
+                    ]
+                },
+                "thrdtrain": {
+                    "type": "equirectangular",
+                    "panorama": "../img/train-room/3.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": 2,
+                            "yaw": 349,
+                            "type": "scene",
+                            "text": "Prev spot",
+                            "sceneId": "scndtrain"
+                        },
+                        {
+                            "pitch": 5,
+                            "yaw": 0,
+                            "type": "scene",
+                            "text": "Next spot",
+                            "sceneId": "frthtrain"
+                        },
+                        {
+                            "pitch": 355,
+                            "yaw": 180,
+                            "type": "scene",
+                            "text": "Next spot",
+                            "sceneId": "ffthtrain"
+                        },
+                    ]
+                },
+                "frthtrain": {
+                    "type": "equirectangular",
+                    "panorama": "../img/train-room/4.jpg",
+                    "yaw": 10,
+                    "hotSpots": [
+                        {
+                            "pitch": 0,
+                            "yaw": 180,
+                            "type": "scene",
+                            "text": "Prev spot",
+                            "sceneId": "thrdtrain"
+                        },
+                        {
+                            "pitch": 0,
+                            "yaw": 110,
+                            "type": "scene",
+                            "text": "Next spot",
+                            "sceneId": "scndtrain"
+                        }
+                    ]
+                },
+                "ffthtrain": {
+                    "type": "equirectangular",
+                    "panorama": "../img/train-room/5.jpg",
+                    "yaw": 110,
+                    "hotSpots": [
+                        {
+                            "pitch": 0,
+                            "yaw": 0,
+                            "type": "scene",
+                            "text": "Prev spot",
+                            "sceneId": "frthtrain"
+                        },
+                        {
+                            "pitch": 0,
+                            "yaw": 140,
+                            "type": "scene",
+                            "text": "Next spot",
+                            "sceneId": "sixtrain"
+                        }
+                    ]
+                },
+                "sixtrain": {
+                    "type": "equirectangular",
+                    "panorama": "../img/train-room/6.jpg",
+                    "yaw": 300,
+                    "hotSpots": [
+                        {
+                            "pitch": 0,
+                            "yaw": 75,
+                            "type": "scene",
+                            "text": "Prev spot",
+                            "sceneId": "ffthtrain"
+                        }
+                    ]
+                }
+            }
+        });
+
+        $("#navToggle").click(function () {
+            $(this).toggleClass("active");
+            $(".overlay").toggleClass("open");
+            // this line ▼ prevents content scroll-behind
+            $("body").toggleClass("locked");
+        });
+        
+        $(".overlay a").click(function () {
+            $("#navToggle").toggleClass("active");
+            $(".overlay").toggleClass("open");
+            $("body").toggleClass("locked");
+        });
+        </script>
+    </body>
+</html>
